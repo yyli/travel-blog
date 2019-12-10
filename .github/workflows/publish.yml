@@ -1,6 +1,8 @@
 name: Publish
 
-on: [push]
+on:
+  push:
+    branches: master
 
 jobs:
   build:
@@ -16,7 +18,7 @@ jobs:
       run: |
         gem install bundler
         bundle install --jobs 4 --retry 3
-    - name: Publish
+    - name: Build
       run: |
         bundle exec jekyll build -d build
         echo "#################################################"
@@ -27,6 +29,8 @@ jobs:
         # No need to have GitHub Pages to run Jekyll
         touch .nojekyll
 
+    - name: Publish
+      run: |
         echo "#################################################"
         echo "Now publishing"
         if [[ -z "${JEKYLL_PAT}" ]]; then
