@@ -63,6 +63,8 @@ jobs:
           echo "Pushing on branch ${remote_branch}"
         fi
 
+        cd build
+        
         remote_repo="https://${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
         git init && \
         git config user.name "${GITHUB_ACTOR}" && \
