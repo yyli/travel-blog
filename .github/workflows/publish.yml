@@ -48,7 +48,7 @@ jobs:
       run: |
         echo "#################################################"
         echo "Now publishing"
-        if [[ -z "${JEKYLL_PAT}" ]]; then
+        if [[ -z "${{secrets.JEKYLL_PAT}}" ]]; then
           TOKEN=${{secrets.GITHUB_TOKEN}}
         else 
           TOKEN=${{secrets.JEKYLL_PAT}}
