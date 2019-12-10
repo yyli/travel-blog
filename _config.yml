@@ -22,8 +22,8 @@ title: Rambint Travel Blog
 email: yiying@rambint.com
 description: >- # this means to ignore newlines until "baseurl:"
   Rambint
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/travel-blog" # the subpath of your site, e.g. /blog
+url: "https://yyli.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  yyli
 timezone: America/New_York
 
